@@ -1,24 +1,18 @@
 
-
 ---
-import "../styles/global.css";
-
-const name = "Jayson Turalde";
-const position = "Software Engineer";
+import Baselayout from "../layouts/Baselayout.astro";
+import Hero from "../sections/Hero.astro";
+import About from "../sections/About.astro";
+import Contact from "../sections/Contact.astro";
+import Projects from "../sections/Projects.astro";
+const name = "jayson turalde";
+const position = "Software Engineer"
 ---
-
-<html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-        <link rel="icon" href="/favicon.ico" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="generator" content={Astro.generator} />
-        <meta name="description" content={`${name} - ${position} Portfolio`} />
-        <title>{name} - {position}</title>
-    </head>
-
-    <body>
-        <slot />
-    </body>
-</html>
+<Baselayout>
+    <main class="max-w-6xl mx-auto my-10 px-6 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        <Hero />
+        <About />
+        <Projects />
+        <Contact />
+    </main>
+</Baselayout>
